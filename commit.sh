@@ -8,9 +8,9 @@ KILL="You Suck"
 
 # function to see where to push what branch
 pushing() {
-    tput setaf 3;echo  What Branch?;tput sgr0 
+    tput setaf 4;echo  What Branch?;tput sgr0 
     read -r branch
-    tput setaf 3;echo  Where to? You can say 'origin', 'staging', or 'production';tput sgr0 
+    tput setaf 5;echo  Where to? You can say 'origin', 'staging', or 'production';tput sgr0 
     read -r ans
     if [ "$ans" = "origin" ] || [ "$ans" = "staging" ] || [ "$ans" = "production" ]
     then
@@ -58,7 +58,7 @@ gitftp() {
 
 gr="$(git root)"
 cd "$gr" 
-tput setaf 3;pwd;tput sgr0 
+tput setaf 2;pwd;tput sgr0 
 
 # begin commit input
 git add . -A
