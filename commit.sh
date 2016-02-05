@@ -53,22 +53,17 @@ gitftp() {
 }
 
 # get the root directory in case you run script from deeper into the repo
-
-# YOU MUST RUN...  
-# git config --global alias.root "rev-parse --show-toplevel" 
-# FOR THIS NEXT PART TO WORK  
-
-gr="$(git root)"
+gr="$(git rev-parse --show-toplevel)"
 cd "$gr" 
-tput setaf 6;pwd;tput sgr0 
+tput setaf 5;pwd;tput sgr0 
 
 # begin commit input
 git add . -A
 read -r -p "Commit description: " desc  
 git commit -m "$desc"
 
-# find out if we're pushing somewhere
-tput setaf 2;echo  wanna do some pushin\'?;tput sgr0 
+# find out if we're pushin somewhere
+tput setaf 2;echo  wanna do some pushin?;tput sgr0 
 read -r push 
 if [ "$push" = "yes" ]
 then 
