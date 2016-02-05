@@ -8,9 +8,9 @@ KILL="You Suck"
 
 # function to see where to push what branch
 pushing() {
-    tput setaf 4;echo  What Branch?;tput sgr0 
+    tput setaf 2;echo  What Branch?;tput sgr0 
     read -r branch
-    tput setaf 5;echo  Where to? You can say 'origin', 'staging', or 'production';tput sgr0 
+    tput setaf 2;echo  Where to? You can say 'origin', 'staging', or 'production';tput sgr0 
     read -r ans
     if [ "$ans" = "origin" ] || [ "$ans" = "staging" ] || [ "$ans" = "production" ]
     then
@@ -38,7 +38,7 @@ more() {
 
 # function to git ftp push  |  not active yet
 gitftp() {
-    tput setaf 3;echo Wanna ftp?;tput sgr0
+    tput setaf 2;echo Wanna ftp?;tput sgr0
     read -r ftp 
     if [ "$ftp" = "yes" ]
     then
@@ -58,7 +58,7 @@ gitftp() {
 
 gr="$(git root)"
 cd "$gr" 
-tput setaf 2;pwd;tput sgr0 
+tput setaf 4;pwd;tput sgr0 
 
 # begin commit input
 git add . -A
