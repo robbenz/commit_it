@@ -4,7 +4,7 @@
 die() { echo "$@" 1>&2 ; exit 1; }
 
 # kill message when dead 
-KILL="Fuck You"
+KILL="You Suck"
 
 # function to see where to push what branch
 pushing() {
