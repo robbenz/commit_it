@@ -10,7 +10,7 @@ KILL="You Suck"
 pushing() {
     git branch
     sleep 1
-    tput setaf 2;echo  What Branch?;tput sgr0 
+    tput setaf 1;echo  What Branch?;tput sgr0 
     read -r branch
     tput setaf 2;echo  Where to? You can say 'origin', 'staging', or 'production';tput sgr0 
     read -r ans
