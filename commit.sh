@@ -58,7 +58,7 @@ gitftp() {
 
 gr="$(git root)"
 cd "$gr" 
-tput setaf 4;pwd;tput sgr0 
+tput setaf 6;pwd;tput sgr0 
 
 # begin commit input
 git add . -A
@@ -66,7 +66,7 @@ read -r -p "Commit description: " desc
 git commit -m "$desc"
 
 # find out if we're pushing somewhere
-tput setaf 2;echo  Wanna Do Some pushing?;tput sgr0 
+tput setaf 2;echo  wanna do some pushin\'?;tput sgr0 
 read -r push 
 if [ "$push" = "yes" ]
 then 
